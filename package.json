@@ -1,0 +1,13 @@
+{
+  "name": "es-svr",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "dateformat": "^1.0.11",
+    "elasticsearch": "^5.0.0",
+    "express": "^4.13.1",
+    "jsonwebtoken": "^5.0.4",
+    "morgan": "^1.6.1",
+    "winston": "^1.0.1"
+  }
+}
