@@ -1,0 +1,101 @@
+{
+	"mappings": {
+		"ru": {
+			"properties": {
+				"src": {
+					"type": "string",
+					"index": "not_analyzed"
+				},
+				"lng": {
+					"type": "string",
+					"index": "not_analyzed"
+				},
+				"url": {
+					"type": "string",
+					"index": "not_analyzed"
+				},
+				"pubDate": {
+					"type": "date",
+					"format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||dd.MM.yyyy HH:mm:ss||dd.MM.yyyy"
+				},
+				"title": {
+					"index_analyzer": "index_ru",
+					"search_analyzer": "search_ru",
+					"type": "string"
+				},
+				"text": {
+					"index_analyzer": "index_ru",
+					"search_analyzer": "search_ru",
+					"type": "string"
+				},
+				"desc": {
+					"index_analyzer": "index_ru",
+					"search_analyzer": "search_ru",
+					"type": "string"
+				},
+				"tags": {
+					"index_analyzer": "index_ru",
+					"search_analyzer": "search_ru",
+					"type": "string"
+				},
+				"img": {
+					"type": "string",
+					"index": "not_analyzed"
+				},
+				"cat": {
+					"type": "string",
+					"index": "not_analyzed"
+				}
+			}
+		},
+		"kk": {
+			"properties": {
+				"src": {
+					"type": "string",
+					"index": "not_analyzed"
+				},
+				"lng": {
+					"type": "string",
+					"index": "not_analyzed"
+				},
+				"url": {
+					"type": "string",
+					"index": "not_analyzed"
+				},
+				"pubDate": {
+					"type": "date",
+					"format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||dd.MM.yyyy HH:mm:ss||dd.MM.yyyy"
+				},
+				"title": {
+					"index_analyzer": "index_kk",
+					"search_analyzer": "search_kk",
+					"type": "string"
+				},
+				"text": {
+					"index_analyzer": "index_kk",
+					"search_analyzer": "search_kk",
+					"type": "string"
+				},
+				"desc": {
+					"index_analyzer": "index_kk",
+					"search_analyzer": "search_kk",
+					"type": "string"
+				},
+				"tags": {
+					"index_analyzer": "index_kk",
+					"search_analyzer": "search_kk",
+					"type": "string"
+				},
+				"img": {
+					"type": "string",
+					"index": "not_analyzed"
+				},
+				"cat": {
+					"type": "string",
+					"index": "not_analyzed"
+				}
+			}
+		}
+	}
+}
+

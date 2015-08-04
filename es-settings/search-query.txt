@@ -1,0 +1,29 @@
+{
+	"query": {
+		"filtered": {
+			"query": {
+				"match": {
+					"fullText": {
+						"query": "республика казахстан",
+						"fuzziness": "AUTO",
+						"operator":  "and"
+					}
+				}
+			},
+			"filter": {
+				"range": {
+					"pubDate": {
+						"gte": "2015-08-03"
+					}
+				}
+			}
+		}
+	},
+    "highlight" : {
+        "fields" : {
+            "fullText" : {
+				"term_vector" : "with_positions_offsets"
+			}
+        }
+    }
+}
