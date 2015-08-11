@@ -2,36 +2,52 @@
 	"query": {
 		"filtered": {
 			"query": {
-				"span_near" : {
-					"clauses" : [
+				"bool": {
+					"must": [
 						{
-							"span_multi": {
-								"match": {
-									"fuzzy": {
-										"fullText": {
-											"fuzziness": "AUTO",
-											"value": "российская"
-										}
-									}
-								}
-							}
-						},
-						{
-							"span_multi": {
-								"match": {
-									"fuzzy": {
-										"fullText": {
-											"fuzziness": "AUTO",
-											"value": "федерация"
-										}
-									}
+							"match": {
+								"fullText": {
+									"query": "хозу парламента",
+									"operator": "and"
 								}
 							}
 						}
 					],
-					"slop" : 2,
-					"in_order" : true,
-					"boost" : 20
+					"should": [
+						{
+							"span_near" : {
+								"clauses" : [
+									{
+										"span_multi": {
+											"match": {
+												"fuzzy": {
+													"fullText": {
+														"fuzziness": "AUTO",
+														"value": "хозу"
+													}
+												}
+											}
+										}
+									},
+									{
+										"span_multi": {
+											"match": {
+												"fuzzy": {
+													"fullText": {
+														"fuzziness": "AUTO",
+														"value": "парламента"
+													}
+												}
+											}
+										}
+									}
+								],
+								"slop" : 2,
+								"in_order" : true,
+								"boost" : 20
+							}
+						}
+					]
 				}
 			},
 			"filter": {
